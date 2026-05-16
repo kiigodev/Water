@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90449b8fa03567240971c69b2d56c5cc, type: 3}
+  m_Name: CabbageData
+  m_EditorClassIdentifier: Assembly-CSharp::PlantData
+  plantName: Cabbage
+  timeToFullyGrow: 30
+  timeToSpoil: 20
+  plantPrefab: {fileID: 4902980687585153274, guid: 2bd77374abb171f4a88aee3c0725224e,
+    type: 3}

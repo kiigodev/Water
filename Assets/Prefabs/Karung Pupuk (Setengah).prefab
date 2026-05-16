@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7978745488805391017
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1314.056
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 42.612
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1116.607
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.875132
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.038738877
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.48200727
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.017671881
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 2.91
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 57.79
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 3.92
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7375640063821039517, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 11755c72cc7f2e2479a774ff72fd6159, type: 2}
+    - target: {fileID: 919132149155446097, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: m_Name
+      value: Karung Pupuk (Setengah)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8856270496566289149, guid: 03bae87222f93bc4c960c5dac5214dd3,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f16b83c580e51e43b2d388a741aa834, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 03bae87222f93bc4c960c5dac5214dd3, type: 3}

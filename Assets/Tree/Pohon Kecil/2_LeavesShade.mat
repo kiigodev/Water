@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 2_LeavesShade
+  m_Shader: {fileID: -6465566751694194690, guid: 04be5e7adfcebe249b95a9cc16eaeddd,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    IgnoreProjection: False
+  disabledShaderPasses:
+  - MOTIONVECTORS
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseTexture:
+        m_Texture: {fileID: 2800000, guid: 16293d9f17dbe8f4d868bfadb8e2ef3e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 16293d9f17dbe8f4d868bfadb8e2ef3e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Opacity_Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture:
+        m_Texture: {fileID: 2800000, guid: d2f321fff7f05aa49ad106541e997dd3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Alpha: 0
+    - _AlphaCutoff: 0.5
+    - _AlphaEdge1: 0.14
+    - _AlphaEdge2: 0
+    - _Alpha_clip: 0
+    - _Ambient: 0.27
+    - _BriShiftMax: 0.1
+    - _BriShiftMin: -0.1
+    - _Brightness: 0
+    - _CUSTOMCOLORSTINTING: 1
+    - _DarkWidth: 0.33
+    - _EdgeSoftness: 0.01
+    - _EnvironmentReflections: 1
+    - _FlipWindUV: 0
+    - _Gradient: 1.4
+    - _GradientMode: 0
+    - _GradientOffset: 0
+    - _GradientPower: 1
+    - _GradientRotate: 0
+    - _HueShiftMax: 0.05
+    - _HueShiftMin: -0.05
+    - _LeafSeedSource: 1
+    - _LeafVariationSeed: 1
+    - _LeavesThickness: 0.5
+    - _MidWidth: 0.33
+    - _MinBrightness: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _RadialAspectY: 1
+    - _RadialRadius: 3
+    - _RadialWorldX: 0
+    - _RadialWorldY: 1
+    - _RadialWorldZ: 0
+    - _ReceiveShadows: 1
+    - _SNOWONOFF: 0
+    - _SS_Power: 0
+    - _SS_Radius: 0
+    - _SatShiftMax: 0.1
+    - _SatShiftMin: -0.1
+    - _Scale: 1
+    - _ShadowBlend: 0.5
+    - _ShadowStrength: 0.8
+    - _Smoothness: 0
+    - _SnowAmount: 1
+    - _SnowCoverage: 0.45
+    - _SnowGradient: 0.83
+    - _SpecularHighlights: 1
+    - _Strength: 0.5
+    - _TRANSLUCENCYONOFF: 1
+    - _TransAmbient: 0.1
+    - _TransDirect: 0.9
+    - _TransNormal: 0.5
+    - _TransScattering: 2
+    - _TransShadow: 0.5
+    - _TransStrength: 1
+    - _WindHeightMask: 1
+    - _WindPhaseOffset: 3
+    - _WindSpeed: 1
+    - _WindStrength: 0.05
+    - _WindTurbulence: 2
+    m_Colors:
+    - _BrightColor: {r: 0.39999998, g: 0.9, b: 0.39999998, a: 1}
+    - _Color: {r: 0.40085626, g: 1, b: 0.26886788, a: 1}
+    - _ColorA: {r: 1, g: 1, b: 1, a: 0}
+    - _ColorB: {r: 1, g: 0, b: 0.34198856, a: 0}
+    - _DarkColor: {r: 0.049999982, g: 0.14999998, b: 0.049999982, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GroundColor: {r: 0.06783728, g: 0.4339623, b: 0, a: 1}
+    - _Main_Light_Direction: {r: 0, g: 0, b: 0, a: 0}
+    - _MidColor: {r: 0.19999996, g: 0.6, b: 0.19999996, a: 1}
+    - _ShadowColor: {r: 0.48449153, g: 0.8867924, b: 0, a: 1}
+    - _Speed: {r: 1, g: 0, b: 0, a: 0}
+    - _TopColor: {r: 0.084312126, g: 0.33962262, b: 0, a: 1}
+    - _Under_Color: {r: 0, g: 0, b: 0, a: 1}
+    - _WindDirection: {r: 1, g: 0, b: 0.3, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
+--- !u!114 &6406232832515093020
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 10
