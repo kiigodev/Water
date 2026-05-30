@@ -1487,9 +1487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb0245ad82879f3438e859382c2acc34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Land
-  soilMat: {fileID: 2100000, guid: 735e441952ba1c4408b42bb31ce706e5, type: 2}
-  farmMat: {fileID: 2100000, guid: 8319ecfe70d693f4b90009b6db70f653, type: 2}
-  wateredMat: {fileID: 2100000, guid: 3b8c3ad28337c624590b36e2826c5f73, type: 2}
+  soilMat: {fileID: 2100000, guid: c4a31aa88a2ab294898d90f91d5e8d3b, type: 2}
+  farmMat: {fileID: 2100000, guid: c4a31aa88a2ab294898d90f91d5e8d3b, type: 2}
+  wateredMat: {fileID: 2100000, guid: c4a31aa88a2ab294898d90f91d5e8d3b, type: 2}
   landStatus: 0
   select: {fileID: 25807655114822909}
   plantUICanvas: {fileID: 8972553480791720270}
