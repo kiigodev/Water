@@ -55,6 +55,7 @@ public class DialogueManager : MonoBehaviour
         currentLineIndex = 0;
         dialogueCanvas.SetActive(true);
         optionsPanel.SetActive(false);
+        InventoryManager.Instance.ToggleVisibility(false);
         
         DisplayNextLine();
     }
@@ -130,6 +131,7 @@ public class DialogueManager : MonoBehaviour
         dialogueCanvas.SetActive(false);
         playerScript.SetFreeze(false); 
         if (camScript) camScript.SetDialogueCamera(false); 
+        InventoryManager.Instance.ToggleVisibility(true);
         
         if (currentSequence.onSequenceEnd != null) currentSequence.onSequenceEnd.Invoke();
     }

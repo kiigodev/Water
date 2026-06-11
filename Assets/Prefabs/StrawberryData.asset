@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90449b8fa03567240971c69b2d56c5cc, type: 3}
+  m_Name: StrawberryData
+  m_EditorClassIdentifier: Assembly-CSharp::PlantData
+  plantPrefab: {fileID: 4902980687585153274, guid: 54241b3e1c0760b4da650e3166c8e95b,
+    type: 3}
+  timeToFullyGrow: 20
+  timeToSpoil: 10

@@ -1494,7 +1494,8 @@ MonoBehaviour:
   select: {fileID: 25807655114822909}
   plantUICanvas: {fileID: 8972553480791720270}
   uiScript: {fileID: 7177889136849311768}
-  currentPlantData: {fileID: 11400000, guid: af6a0c0becae0a24d97b5e890b9ffbcd, type: 2}
+  plantDataA: {fileID: 11400000, guid: af6a0c0becae0a24d97b5e890b9ffbcd, type: 2}
+  plantDataB: {fileID: 11400000, guid: 83329aba4084d4d47ad0f793cff47506, type: 2}
   plantSocket: {fileID: 4027573596025552592}
   currentGrowth: 0
   idealWater: 0.7

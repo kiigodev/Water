@@ -16,7 +16,11 @@ public class Land : MonoBehaviour
     public PlantUI uiScript;
 
     [Header("Plant Info")]
-    public PlantData currentPlantData; 
+    public PlantData plantDataA; 
+    public PlantData plantDataB; 
+    private PlantData activePlantData; 
+    private HeldItem harvestItemToGive; 
+
     private PlantVisuals currentVisuals; 
     private GameObject activePlantObject; 
 
@@ -103,7 +107,7 @@ public class Land : MonoBehaviour
         else if (worstDiff <= 0.35f) currentGrowthRate = 0.5f;    
         else currentGrowthRate = -1f;    
 
-        currentGrowth += currentGrowthRate * (100f / currentPlantData.timeToFullyGrow) * Time.deltaTime;
+        currentGrowth += currentGrowthRate * (100f / activePlantData.timeToFullyGrow) * Time.deltaTime;
 
         if (currentGrowth >= 100f)
         {
@@ -157,7 +161,7 @@ public class Land : MonoBehaviour
 
     void HarvestTimeout()
     {
-        currentGrowth -= (100f / currentPlantData.timeToSpoil) * Time.deltaTime;
+        currentGrowth -= (100f / activePlantData.timeToSpoil) * Time.deltaTime;
         if (currentGrowth <= 0f)
         {
             currentGrowth = 0f;
@@ -203,41 +207,81 @@ public class Land : MonoBehaviour
 
     public bool Interact(HeldItem heldItem)
     {
+        Debug.Log($"Land received interaction! Item held: {heldItem}");
+
+        // 1. PLANTING A SEED
         if (!isPlanted)
         {
-            if (heldItem != HeldItem.None)
+            Debug.Log("Land is empty. Checking if we have a seed...");
+            if (heldItem == HeldItem.SeedA || heldItem == HeldItem.SeedB)
             {
-                Debug.Log("No Plant here");
-                return false; 
+                Debug.Log("We have a seed! Setting up PlantData...");
+                
+                activePlantData = (heldItem == HeldItem.SeedA) ? plantDataA : plantDataB;
+                harvestItemToGive = (heldItem == HeldItem.SeedA) ? HeldItem.FarmedPlantA : HeldItem.FarmedPlantB;
+                
+                if (activePlantData == null) {
+                    Debug.LogWarning("BRO! activePlantData is empty in the Inspector! Can't plant!");
+                    return false;
+                }
+                if (activePlantData.plantPrefab == null) {
+                    Debug.LogWarning("BRO! plantPrefab is empty inside your PlantData! Can't plant!");
+                    return false;
+                }
+
+                Debug.Log("PlantData is good. Spawning plant now!");
+                Vector3 spawnPos = plantSocket != null ? plantSocket.position : transform.position;
+                activePlantObject = Instantiate(activePlantData.plantPrefab, spawnPos, Quaternion.identity, transform);
+                currentVisuals = activePlantObject.GetComponent<PlantVisuals>();
+
+                if (currentVisuals)
+                {
+                    currentVisuals.HideAllPlants();
+                    if (currentVisuals.healthyMesh) currentVisuals.healthyMesh.SetActive(true);
+                }
+                
+                isPlanted = true;
+                isDead = false;
+                isReadyToHarvest = false;
+                isWithered = false;
+                currentGrowth = 5f; 
+                
+                currentWater = 0.5f;
+                currentFertilizer = 0.5f;
+                currentPesticide = 0.5f;
+                
+                return true; 
             }
-
-            if (currentPlantData == null || currentPlantData.plantPrefab == null) return false;
-
-            Vector3 spawnPos = plantSocket != null ? plantSocket.position : transform.position;
-            activePlantObject = Instantiate(currentPlantData.plantPrefab, spawnPos, Quaternion.identity, transform);
-            currentVisuals = activePlantObject.GetComponent<PlantVisuals>();
-
-            if (currentVisuals)
-            {
-                currentVisuals.HideAllPlants();
-                if (currentVisuals.healthyMesh) currentVisuals.healthyMesh.SetActive(true);
-            }
-            
-            isPlanted = true;
-            isDead = false;
-            isReadyToHarvest = false;
-            isWithered = false;
-            currentGrowth = 5f; 
-            
-            currentWater = 0.5f;
-            currentFertilizer = 0.5f;
-            currentPesticide = 0.5f;
-            
+            Debug.Log("Not holding a seed, can't do anything to empty dirt.");
             return false; 
         }
 
+        if (heldItem == HeldItem.Shovel)
+        {
+            // MUST CHECK THIS FIRST! 
+            if (isDead || isWithered)
+            {
+                Debug.Log("Cleared dead/withered plant! (No items given)");
+                ResetLand();
+            }
+            // IF it's not dead/withered, THEN check if we can harvest!
+            else if (isReadyToHarvest)
+            {
+                Debug.Log("Harvested healthy plant!");
+                InventoryManager.Instance.AddItem(harvestItemToGive, 1);
+                ResetLand(); 
+            }
+            else
+            {
+                Debug.Log("Plant is still growing, shovel does nothing right now.");
+            }
+            return false; 
+        }
+
+        // 3. APPLYING STATS
         if (isPlanted && !isDead && !isWithered && !isReadyToHarvest && heldItem != HeldItem.None)
         {
+            Debug.Log("Applying stats to growing plant!");
             if (heldItem == HeldItem.Water) currentWater += waterBoost;
             else if (heldItem == HeldItem.Fertilizer) currentFertilizer += fertBoost;
             else if (heldItem == HeldItem.Pesticide) currentPesticide += pestBoost;
@@ -246,9 +290,20 @@ public class Land : MonoBehaviour
             currentFertilizer = Mathf.Clamp01(currentFertilizer);
             currentPesticide = Mathf.Clamp01(currentPesticide);
 
-            return true; 
+            return (heldItem == HeldItem.Fertilizer || heldItem == HeldItem.Pesticide); 
         }
 
         return false;
+    }
+
+    void ResetLand()
+    {
+        isPlanted = false;
+        isReadyToHarvest = false;
+        isDead = false;
+        isWithered = false;
+        if (activePlantObject != null) Destroy(activePlantObject);
+        SwitchLand(LandStatus.Soil);
+        UpdateUI();
     }
 }

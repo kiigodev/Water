@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 5141332185389118289}
   - component: {fileID: 8536517616829880664}
   - component: {fileID: 4621499020171088817}
+  - component: {fileID: 2107906629945109480}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -66,6 +67,7 @@ Transform:
   m_Children:
   - {fileID: 5029456337032389751}
   - {fileID: 2995043461576547790}
+  - {fileID: 1967722425463881314}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8565505537449894862
@@ -144,7 +146,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4621499020171088817
 MonoBehaviour:
@@ -160,15 +162,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   mainDialogue:
     lines:
-    - speakerName: Ucup
-      text: Cihuyy nyawit bareng mau ga, bro?
-    - speakerName: Player
-      text: Buset masih pagi udh mau nyawit aja
-    - speakerName: Ucup
-      text: Justru itu letak asiknya!
+    - speakerName: Skymatt27
+      text: TIdakk kunciku hilang!
+    - speakerName: Skymatt27
+      text: Aku tidak bisa membuka tokoku
+    - speakerName: Rizky
+      text: Oh...
     hasChoices: 1
     option1:
-      choiceText: Gas!
+      choiceText: Saya carikan
       followUpSequence:
         lines:
         - speakerName: Ucup
@@ -349,8 +351,20 @@ MonoBehaviour:
                 m_StringArgument: 
                 m_BoolArgument: 0
               m_CallState: 2
+            - m_Target: {fileID: 2107906629945109480}
+              m_TargetAssemblyTypeName: ObjectiveHandler, Assembly-CSharp
+              m_MethodName: ActivateObjective
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
     option2:
-      choiceText: Skip
+      choiceText: GWS
       followUpSequence:
         lines:
         - speakerName: Ucup
@@ -523,6 +537,1054 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   cameraSocket: {fileID: 2995043461576547790}
+--- !u!114 &2107906629945109480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5368635473082800872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ed6341de4b3c6458cafef048dd3d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveHandler
+  questDescription: Collect 5 Farmed Plants
+  requiredItem: 6
+  requiredAmount: 5
+  coinReward: 50
+  inProgressDialogue:
+    lines:
+    - speakerName: Rahmad
+      text: Tolong ya bro!
+    hasChoices: 0
+    option1:
+      choiceText: 
+      followUpSequence:
+        lines: []
+        hasChoices: 0
+        option1:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        option2:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        onSequenceEnd:
+          m_PersistentCalls:
+            m_Calls: []
+    option2:
+      choiceText: 
+      followUpSequence:
+        lines: []
+        hasChoices: 0
+        option1:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        option2:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        onSequenceEnd:
+          m_PersistentCalls:
+            m_Calls: []
+    onSequenceEnd:
+      m_PersistentCalls:
+        m_Calls: []
+  successDialogue:
+    lines: []
+    hasChoices: 0
+    option1:
+      choiceText: 
+      followUpSequence:
+        lines: []
+        hasChoices: 0
+        option1:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        option2:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        onSequenceEnd:
+          m_PersistentCalls:
+            m_Calls: []
+    option2:
+      choiceText: 
+      followUpSequence:
+        lines: []
+        hasChoices: 0
+        option1:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        option2:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        onSequenceEnd:
+          m_PersistentCalls:
+            m_Calls: []
+    onSequenceEnd:
+      m_PersistentCalls:
+        m_Calls: []
+  completedDialogue:
+    lines:
+    - speakerName: Rahmad
+      text: Thanks, bro!
+    hasChoices: 0
+    option1:
+      choiceText: 
+      followUpSequence:
+        lines: []
+        hasChoices: 0
+        option1:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        option2:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        onSequenceEnd:
+          m_PersistentCalls:
+            m_Calls: []
+    option2:
+      choiceText: 
+      followUpSequence:
+        lines: []
+        hasChoices: 0
+        option1:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        option2:
+          choiceText: 
+          followUpSequence:
+            lines: []
+            hasChoices: 0
+            option1:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            option2:
+              choiceText: 
+              followUpSequence:
+                lines: []
+                hasChoices: 0
+                option1:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                option2:
+                  choiceText: 
+                  followUpSequence:
+                    lines: []
+                    hasChoices: 0
+                    option1:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    option2:
+                      choiceText: 
+                      followUpSequence:
+                        hasChoices: 0
+                    onSequenceEnd: {}
+                onSequenceEnd:
+                  m_PersistentCalls:
+                    m_Calls: []
+            onSequenceEnd:
+              m_PersistentCalls:
+                m_Calls: []
+        onSequenceEnd:
+          m_PersistentCalls:
+            m_Calls: []
+    onSequenceEnd:
+      m_PersistentCalls:
+        m_Calls: []
+  originalTrigger: {fileID: 4621499020171088817}
+  cameraSocket: {fileID: 2995043461576547790}
 --- !u!1 &5462459305684817268
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +1603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5029456337032389751
 Transform:
   m_ObjectHideFlags: 0
@@ -637,3 +1699,92 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &6669535456661973346
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8135424869263248336}
+    m_Modifications:
+    - target: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.57304394
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.57304406
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.57304394
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5458372
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.034
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.72627467
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6874047
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 86.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5515751326138355130, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+        type: 3}
+      propertyPath: m_Name
+      value: Penjual toko
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c32ef2a47e5f9e947b81163e36cbb52f, type: 3}
+--- !u!4 &1967722425463881314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5170187587875084032, guid: c32ef2a47e5f9e947b81163e36cbb52f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6669535456661973346}
+  m_PrefabAsset: {fileID: 0}
